@@ -21,9 +21,9 @@ var sdpConstraints = {
 
 /////////////////////////////////////////////
 
-var room = prompt('Enter Room name :');
-// Could prompt for room name:
-// room = prompt('Enter room name:');
+var room = (Math.random() + 1).toString(36).substring(2);
+var roomName = document.getElementById("room-name");
+roomName.textContent = room;
 
 var socket = io.connect();
 
@@ -232,7 +232,7 @@ function handleRemoteStreamAdded(event) {
 }catch(e){
   console.log("HANDLE REMOTE SCREEN ERROR" + e);
 }
-  
+
 }
 
 function handleRemoteStreamRemoved(event) {
