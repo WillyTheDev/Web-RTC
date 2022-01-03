@@ -39,8 +39,8 @@ var viewersElement = document.getElementById("viewers");
 viewersElement.textContent = viewers + ' : viewers';
 
 function refreshViewersCount(){
+  viewers++;
   viewersElement.textContent = viewers + ' : viewers';
-  console.log("Numbers of viewers is :" + viewers);
 }
 
 
@@ -149,7 +149,6 @@ function maybeStart() {
   console.log('>>>>>>> maybeStart() ', isStarted, localStream, isChannelReady);
   if (typeof localStream !== 'undefined' && isChannelReady) {
     console.log('>>>>>> creating peer connection');
-    refreshViewersCount();
     createPeerConnection();
     pcs[viewers].addStream(localStream);
     isStarted = true;
@@ -172,13 +171,12 @@ function createPeerConnection() {
     pcs[viewers].onicecandidate = handleIceCandidate;
     pcs[viewers].onaddstream = handleRemoteStreamAdded;
     pcs[viewers].onremovestream = handleRemoteStreamRemoved;
-    console.log("RTCPEERConnection on viewer :" + viewers + ": " + pcs[viewers]);
+
     // pc = new RTCPeerConnection(null);
     // pc.onicecandidate = handleIceCandidate;
     // pc.onaddstream = handleRemoteStreamAdded;
     // pc.onremovestream = handleRemoteStreamRemoved;
     console.log('Created RTCPeerConnnection');
-    viewers++;
   } catch (e) {
     console.log('Failed to create PeerConnection, exception: ' + e.message);
     alert('Cannot create RTCPeerConnection object.');
