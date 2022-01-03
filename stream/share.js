@@ -157,7 +157,6 @@ function maybeStart() {
     if (isInitiator) {
       doCall();
     }
-    viewers++;
   }
 }
 
@@ -174,7 +173,12 @@ function createPeerConnection() {
     pcs[viewers].onaddstream = handleRemoteStreamAdded;
     pcs[viewers].onremovestream = handleRemoteStreamRemoved;
     console.log("RTCPEERConnection on viewer :" + viewers + ": " + pcs[viewers]);
+    // pc = new RTCPeerConnection(null);
+    // pc.onicecandidate = handleIceCandidate;
+    // pc.onaddstream = handleRemoteStreamAdded;
+    // pc.onremovestream = handleRemoteStreamRemoved;
     console.log('Created RTCPeerConnnection');
+    viewers++;
   } catch (e) {
     console.log('Failed to create PeerConnection, exception: ' + e.message);
     alert('Cannot create RTCPeerConnection object.');
@@ -279,8 +283,8 @@ function handleRemoteHangup() {
 
 function stop() {
   isStarted = false;
+  viewers--;
   pcs[viewers].pop();
   pcs[viewers].close();
   pcs[viewers] = null;
-  viewers--;
 }
