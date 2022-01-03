@@ -66,6 +66,7 @@ socket.on('full', function(room) {
 socket.on('join', function (room){
   console.log('Another peer made a request to join room ' + room);
   console.log('This peer is the initiator of room ' + room + '!');
+  viewers++;
   isChannelReady = true;
 });
 
@@ -89,7 +90,6 @@ function sendMessage(message) {
 socket.on('message', function(message) {
   console.log('Client received message:', message);
   if (message === 'Ready To Watch') {
-    viewers++;
     maybeStart();
   } else if (message.type === 'offer') {
     if (!isInitiator && !isStarted) {
