@@ -216,7 +216,7 @@ function handleRemoteStreamAdded(event) {
 }catch(e){
   console.log("HANDLE REMOTE SCREEN ERROR" + e);
 }
-  
+
 }
 
 function handleRemoteStreamRemoved(event) {
