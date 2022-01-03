@@ -156,7 +156,6 @@ function maybeStart() {
     if (isInitiator) {
       doCall();
     }
-    viewers++;
   }
 }
 
