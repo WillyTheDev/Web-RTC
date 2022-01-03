@@ -191,7 +191,6 @@ function handleIceCandidate(event) {
     });
   } else {
     console.log('End of candidates.');
-    viewers++;
   }
 }
 
@@ -278,7 +277,6 @@ function handleRemoteHangup() {
 
 function stop() {
   isStarted = false;
-  pcs[viewers].pop();
   pcs[viewers].close();
   pcs[viewers] = null;
   viewers--;
