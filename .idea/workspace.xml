@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebcd9382-daa1-413d-b84b-043fee6fd29e" name="Changes" comment="update one to many Stream">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stream/share.js" beforeDir="false" afterPath="$PROJECT_DIR$/stream/share.js" afterDir="false" />
-    </list>
+    <list default="true" id="ebcd9382-daa1-413d-b84b-043fee6fd29e" name="Changes" comment="Remove One to many peers" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

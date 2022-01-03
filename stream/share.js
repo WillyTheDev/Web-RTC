@@ -4,7 +4,7 @@ var isChannelReady = false;
 var isInitiator = false;
 var isStarted = false;
 var localStream;
-var pcs = [];
+var pc;
 var turnReady;
 
 var pcConfig = {
