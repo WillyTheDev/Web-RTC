@@ -90,7 +90,6 @@ function sendMessage(message) {
 socket.on('message', function(message) {
   console.log('Client received message:', message);
   if (message === 'Ready To Watch') {
-    viewers++;
     maybeStart();
   } else if (message.type === 'offer') {
     if (!isInitiator && !isStarted) {
