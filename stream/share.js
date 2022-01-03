@@ -20,10 +20,26 @@ var sdpConstraints = {
 };
 
 /////////////////////////////////////////////
+////////////GENERATE ROOM ID ///////////////
 
 var room = (Math.random() + 1).toString(36).substring(2);
 var roomName = document.getElementById("room-name");
 roomName.textContent = room;
+
+function copyRoom(){
+  navigator.clipboard.writeText(room);
+  alert("la Room ID a été copiée 🎇");
+}
+
+////////////////////////////////////////////
+//////////TRACK NUMBER OF VIEWERS///////////
+
+var viewers = 0;
+var viewersElement = document.getElementById("viewers");
+viewersElement.textContent = viewers + ' : viewers';
+
+///////////////////////////////////////////
+/////////ICECANDIDATE WITH WEBSOCKET///////
 
 var socket = io.connect();
 
@@ -44,6 +60,7 @@ socket.on('full', function(room) {
 socket.on('join', function (room){
   console.log('Another peer made a request to join room ' + room);
   console.log('This peer is the initiator of room ' + room + '!');
+  viewers++;
   isChannelReady = true;
 });
 

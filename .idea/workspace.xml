@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ebcd9382-daa1-413d-b84b-043fee6fd29e" name="Changes" comment="Add html element to share screen">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stream/css/share.css" beforeDir="false" afterPath="$PROJECT_DIR$/stream/css/share.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stream/share.html" beforeDir="false" afterPath="$PROJECT_DIR$/stream/share.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream/share.js" beforeDir="false" afterPath="$PROJECT_DIR$/stream/share.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +58,7 @@
       <updated>1641195490056</updated>
       <workItem from="1641195492154" duration="739000" />
       <workItem from="1641196542235" duration="284000" />
-      <workItem from="1641196868601" duration="2938000" />
+      <workItem from="1641196868601" duration="3927000" />
     </task>
     <task id="LOCAL-00001" summary="git init">
       <created>1641197073384</created>
