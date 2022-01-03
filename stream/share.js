@@ -4,7 +4,6 @@ var isChannelReady = false;
 var isInitiator = false;
 var isStarted = false;
 var localStream;
-var pc;
 var pcs = [];
 var turnReady;
 
@@ -205,19 +204,19 @@ function handleCreateOfferError(event) {
 
 function doCall() {
   console.log('Sending offer to peer');
-  pc.createOffer(setLocalAndSendMessage, handleCreateOfferError);
+  pcs[viewers].createOffer(setLocalAndSendMessage, handleCreateOfferError);
 }
 
 function doAnswer() {
   console.log('Sending answer to peer.');
-  pc.createAnswer().then(
+  pcs[viewers].createAnswer().then(
     setLocalAndSendMessage,
     onCreateSessionDescriptionError
   );
 }
 
 function setLocalAndSendMessage(sessionDescription) {
-  pc.setLocalDescription(sessionDescription);
+  pcs[viewers].setLocalDescription(sessionDescription);
   console.log('setLocalAndSendMessage sending message', sessionDescription);
   sendMessage(sessionDescription);
 }
