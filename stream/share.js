@@ -4,7 +4,7 @@ var isChannelReady = false;
 var isInitiator = false;
 var isStarted = false;
 var localStream;
-var pc;
+var pcs = [];
 var turnReady;
 
 var pcConfig = {
@@ -95,16 +95,16 @@ socket.on('message', function(message) {
     if (!isInitiator && !isStarted) {
       maybeStart();
     }
-    pc.setRemoteDescription(new RTCSessionDescription(message));
+    pcs[viewers].setRemoteDescription(new RTCSessionDescription(message));
     doAnswer();
   } else if (message.type === 'answer' && isStarted) {
-    pc.setRemoteDescription(new RTCSessionDescription(message));
+    pcs[viewers].setRemoteDescription(new RTCSessionDescription(message));
   } else if (message.type === 'candidate' && isStarted) {
     var candidate = new RTCIceCandidate({
       sdpMLineIndex: message.label,
       candidate: message.candidate
     });
-    pc.addIceCandidate(candidate);
+    pcs[viewers].addIceCandidate(candidate);
   } else if (message === 'bye' && isStarted) {
     handleRemoteHangup();
   }
@@ -150,7 +150,7 @@ function maybeStart() {
   if (typeof localStream !== 'undefined' && isChannelReady) {
     console.log('>>>>>> creating peer connection');
     createPeerConnection();
-    pc.addStream(localStream);
+    pcs[viewers].addStream(localStream);
     isStarted = true;
     console.log('isInitiator', isInitiator);
     if (isInitiator) {
@@ -167,10 +167,10 @@ window.onbeforeunload = function() {
 
 function createPeerConnection() {
   try {
-    pc = new RTCPeerConnection(null);
-    pc.onicecandidate = handleIceCandidate;
-    pc.onaddstream = handleRemoteStreamAdded;
-    pc.onremovestream = handleRemoteStreamRemoved;
+    pcs[viewers] = new RTCPeerConnection(null);
+    pcs[viewers].onicecandidate = handleIceCandidate;
+    pcs[viewers].onaddstream = handleRemoteStreamAdded;
+    pcs[viewers].onremovestream = handleRemoteStreamRemoved;
     console.log('Created RTCPeerConnnection');
   } catch (e) {
     console.log('Failed to create PeerConnection, exception: ' + e.message);
@@ -199,19 +199,19 @@ function handleCreateOfferError(event) {
 
 function doCall() {
   console.log('Sending offer to peer');
-  pc.createOffer(setLocalAndSendMessage, handleCreateOfferError);
+  pcs[viewers].createOffer(setLocalAndSendMessage, handleCreateOfferError);
 }
 
 function doAnswer() {
   console.log('Sending answer to peer.');
-  pc.createAnswer().then(
+  pcs[viewers].createAnswer().then(
     setLocalAndSendMessage,
     onCreateSessionDescriptionError
   );
 }
 
 function setLocalAndSendMessage(sessionDescription) {
-  pc.setLocalDescription(sessionDescription);
+  pcs[viewers].setLocalDescription(sessionDescription);
   console.log('setLocalAndSendMessage sending message', sessionDescription);
   sendMessage(sessionDescription);
 }
@@ -276,6 +276,6 @@ function handleRemoteHangup() {
 
 function stop() {
   isStarted = false;
-  pc.close();
-  pc = null;
+  pcs[viewers].close();
+  pcs[viewers] = null;
 }
