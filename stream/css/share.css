@@ -1,0 +1,27 @@
+/**************************************************
+  1. HEADER
+  2. VIDEO
+  3. FOOTER
+
+ ***************************************************/
+
+/* 1. HEADER */
+
+header{
+  color: beige;
+  background-color: black;
+}
+
+
+
+#videos {
+  background-color: gray;
+  width: auto;
+  height: 80vh;
+}
+
+footer {
+  background-color: black;
+  width: auto;
+  height: 50px;
+}
