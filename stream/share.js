@@ -192,7 +192,6 @@ function handleIceCandidate(event) {
     });
   } else {
     console.log('End of candidates.');
-    viewers++;
   }
 }
 
