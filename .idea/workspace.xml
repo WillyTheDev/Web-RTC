@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebcd9382-daa1-413d-b84b-043fee6fd29e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+    <list default="true" id="ebcd9382-daa1-413d-b84b-043fee6fd29e" name="Changes" comment="Add extension and add style.css for index.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream/share.html" beforeDir="false" afterPath="$PROJECT_DIR$/stream/share.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream/watch.html" beforeDir="false" afterPath="$PROJECT_DIR$/stream/watch.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641226037499</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Add extension and add style.css for index.html">
+      <created>1642063356425</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1642063356425</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +206,7 @@
     <MESSAGE value="Add style css and viewer counter" />
     <MESSAGE value="Fix style.css" />
     <MESSAGE value="update one to many Stream" />
-    <option name="LAST_COMMIT_MESSAGE" value="update one to many Stream" />
+    <MESSAGE value="Add extension and add style.css for index.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add extension and add style.css for index.html" />
   </component>
 </project>
