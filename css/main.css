@@ -33,6 +33,9 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #626578;
+  border: none;
+  box-shadow: 3px 3px 12px #282A36;
 }
 
 span {

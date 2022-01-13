@@ -10,7 +10,7 @@
 html, body{
   padding: 0;
   margin: 0;
-  background-color: black;
+  background-color: #282A36;
 }
 
 /* 2. HEADER */
@@ -32,7 +32,6 @@ section{
 
 #videos {
   background-color: gray;
-  border: 3px blue solid;
   margin-top: 10px;
   display: flex;
 }
