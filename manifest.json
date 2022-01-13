@@ -4,8 +4,7 @@
   "description": "Share or watch screen",
   "version": "1.0",
   "permissions": [
-    "http://*/*",
-    "https://*/*"
+    "tabs"
   ],
   "browser_action": {
     "default_icon": "stream_icon.png",
