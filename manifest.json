@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "WebRTC Stream Extension",
+  "description": "Share or watch screen",
+  "version": "1.0",
+  "permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "browser_action": {
+    "default_icon": "stream_icon.png",
+    "default_popup": "index.html"
+  }
+}

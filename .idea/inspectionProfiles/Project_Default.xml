@@ -1,0 +1,27 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="LossyEncoding" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="NonAsciiCharacters" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PhpClassNamingConventionInspection" enabled="true" level="ERROR" enabled_by_default="true">
+      <option name="m_minLength" value="1" />
+    </inspection_tool>
+    <inspection_tool class="PhpConstantNamingConventionInspection" enabled="true" level="ERROR" enabled_by_default="true">
+      <option name="m_minLength" value="1" />
+    </inspection_tool>
+    <inspection_tool class="PhpFunctionNamingConventionInspection" enabled="true" level="ERROR" enabled_by_default="true">
+      <option name="m_minLength" value="1" />
+    </inspection_tool>
+    <inspection_tool class="PhpMethodNamingConventionInspection" enabled="true" level="ERROR" enabled_by_default="true">
+      <option name="m_minLength" value="1" />
+    </inspection_tool>
+    <inspection_tool class="PhpPropertyNamingConventionInspection" enabled="true" level="ERROR" enabled_by_default="true">
+      <option name="m_minLength" value="1" />
+    </inspection_tool>
+    <inspection_tool class="PhpVariableNamingConventionInspection" enabled="true" level="ERROR" enabled_by_default="true">
+      <option name="m_regex" value="[a-zA-Z_\x80-\xff][a-zA-Z0-9_\x80-\xff]*" />
+      <option name="m_minLength" value="1" />
+      <option name="m_maxLength" value="17" />
+    </inspection_tool>
+  </profile>
+</component>
