@@ -55,7 +55,6 @@ socket.on('full', function(room) {
 socket.on('join', function (room){
   console.log('Another peer made a request to join room ' + room);
   console.log('This peer is the initiator of room ' + room + '!');
-  viewers++;
   isChannelReady = true;
 });
 
@@ -265,7 +264,6 @@ function handleRemoteHangup() {
 
 function stop() {
   isStarted = false;
-  viewers--;
   pc.close();
   pc = null;
 }
