@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebcd9382-daa1-413d-b84b-043fee6fd29e" name="Changes" comment="Add extension and add style.css for index.html">
+    <list default="true" id="ebcd9382-daa1-413d-b84b-043fee6fd29e" name="Changes" comment="Add main.css for share.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stream/share.html" beforeDir="false" afterPath="$PROJECT_DIR$/stream/share.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stream/watch.html" beforeDir="false" afterPath="$PROJECT_DIR$/stream/watch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642063356425</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add main.css for share.html">
+      <created>1642078585399</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1642078585399</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +212,7 @@
     <MESSAGE value="Fix style.css" />
     <MESSAGE value="update one to many Stream" />
     <MESSAGE value="Add extension and add style.css for index.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add extension and add style.css for index.html" />
+    <MESSAGE value="Add main.css for share.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add main.css for share.html" />
   </component>
 </project>
