@@ -31,17 +31,6 @@ function copyRoom(){
   alert("la Room ID a été copiée 🎇");
 }
 
-////////////////////////////////////////////
-//////////TRACK NUMBER OF VIEWERS///////////
-
-var viewers = 0;
-var viewersElement = document.getElementById("viewers");
-viewersElement.textContent = viewers + ' : viewers';
-
-function refreshViewersCount(){
-  viewers++;
-  viewersElement.textContent = viewers + ' : viewers';
-}
 
 
 ///////////////////////////////////////////
