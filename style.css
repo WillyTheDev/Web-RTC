@@ -37,6 +37,11 @@ button {
   font-size: 20px;
 }
 
+button:hover {
+  background-color: #44475C;
+  cursor: pointer;
+}
+
 a {
   width: 250px;
   margin-left: auto;
