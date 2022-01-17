@@ -7,19 +7,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="../css/main.css" />
 
 </head>
 
 <body>
-<svg class="icon" width="40" height="40" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M30.9375 84.375C26.1211 84.375 22.5 80.4375 22.5 75.9375V14.0625C22.5 9.6012 26.0859 5.62854 30.9393 5.62854C32.4661 5.62854 33.9891 6.04198 35.3373 6.86446L85.9623 37.802C88.4707 39.3399 90 42.0645 90 45C90 47.9356 88.4702 50.6655 85.9623 52.1983L35.3373 83.1358C33.9961 83.9532 32.4668 84.375 30.9375 84.375Z" fill="#8AFF80"/>
-</svg>
-<h1>You are now Watching</h1>
-
-<div id="videos">
-  <video id="remoteVideo" autoplay playsinline controls></video>
-</div>
+<header>
+  <svg class="icon" width="40" height="40" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M30.9375 84.375C26.1211 84.375 22.5 80.4375 22.5 75.9375V14.0625C22.5 9.6012 26.0859 5.62854 30.9393 5.62854C32.4661 5.62854 33.9891 6.04198 35.3373 6.86446L85.9623 37.802C88.4707 39.3399 90 42.0645 90 45C90 47.9356 88.4702 50.6655 85.9623 52.1983L35.3373 83.1358C33.9961 83.9532 32.4668 84.375 30.9375 84.375Z" fill="#8AFF80"/>
+  </svg>
+  <h1>You are now Watching...</h1>
+</header>
+<section>
+  <div id="videos">
+    <video id="remoteVideo" autoplay playsinline controls></video>
+  </div>
+</section>
 
 <!-- This file is automatically added/served when running "node index.js". -->
 <script src="../socket.io/socket.io.js"></script>

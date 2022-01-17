@@ -1,5 +1,14 @@
-body {
+html, body{
+  padding: 0;
+  margin: 0;
   background-color: #282A36;
+}
+
+header{
+  color: beige;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 div.buttonshare {
@@ -10,14 +19,10 @@ div.buttonshare {
   height: 30px;
 }
 
-div.viewers {
-  background-color: #3D3F4F;
-  border-radius: 5px;
-  width: 120px;
-  height: 30px;
+section{
   display: flex;
-  align-items: center;
   justify-content: center;
+  padding: 25px
 }
 
 h1 {
@@ -48,7 +53,19 @@ span {
 video {
   border: 3px solid #FF6161;
   padding: 0;
-  margin: 0;
   max-width: 80vw;
+  background-color: gray;
+  margin: 10px 0 0;
+  display: flex;
 }
+
+footer {
+  background-color: black;
+  color: white;
+  width: auto;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
 
