@@ -8,9 +8,9 @@ var pc;
 var turnReady;
 
 var pcConfig = {
-  'iceServers': [{
-    'urls': 'stun:stun.l.google.com:19302'
-  }]
+  'iceServers': [
+    {urls: "stun:coturnrtc.isc.heia-fr.ch"},
+    {urls: "turn:coturnrtc.isc.heia-fr.ch", credential: "test_password_very_secure21", username: "test"}]
 };
 
 // Set up audio and video regardless of what devices are present.
