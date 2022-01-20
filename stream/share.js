@@ -31,8 +31,6 @@ function copyRoom(){
   alert("la Room ID a été copiée 🎇");
 }
 
-
-
 ///////////////////////////////////////////
 /////////ICECANDIDATE WITH WEBSOCKET///////
 
@@ -138,7 +136,9 @@ function maybeStart() {
   if (typeof localStream !== 'undefined' && isChannelReady) {
     console.log('>>>>>> creating peer connection');
     createPeerConnection();
-    pc.addStream(localStream);
+    localStream.getTracks().forEach(function (track) {
+      pc.addTrack(track, stream);
+    });
     isStarted = true;
     console.log('isInitiator', isInitiator);
     if (isInitiator) {
