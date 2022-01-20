@@ -137,7 +137,7 @@ function maybeStart() {
     console.log('>>>>>> creating peer connection');
     createPeerConnection();
     localStream.getTracks().forEach(function (track) {
-      pc.addTrack(track, stream);
+      pc.addTrack(track, localStream);
     });
     isStarted = true;
     console.log('isInitiator', isInitiator);
